@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: itemType
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 28757671009210435, guid: 7d6cb89c182b6494eb18f95409245fb9, type: 3}
+      propertyPath: itemScore
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 2342049929122278942, guid: 7d6cb89c182b6494eb18f95409245fb9, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4

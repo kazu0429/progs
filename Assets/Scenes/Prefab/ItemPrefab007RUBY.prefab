@@ -13,6 +13,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 28757671009210435, guid: 7d6cb89c182b6494eb18f95409245fb9, type: 3}
+      propertyPath: itemScore
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 28757671009210435, guid: 7d6cb89c182b6494eb18f95409245fb9, type: 3}
       propertyPath: nextItemPrefab
       value: 
       objectReference: {fileID: 8204184850720220705, guid: 879577acbfe424ff19f2cef66cdac7ef, type: 3}
