@@ -27,6 +27,7 @@ public class ItemsManager : MonoBehaviour
     public int nextItemIndex;
     public int nowItemIndex;
 
+
     private int ChoiceNextItem()
     {
         int index = Random.Range(0, ItemPrefabs.Length);
@@ -39,7 +40,6 @@ public class ItemsManager : MonoBehaviour
         nowItemImage.sprite = ItemPrefabs[index].GetComponent<SpriteRenderer>().sprite;
     }
 
-    // Start is called before the first frame update
     private void Start()
     {
         nowItemIndex = Random.Range(0, ItemPrefabs.Length);
