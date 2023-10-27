@@ -19,7 +19,7 @@ public class cursolManager : MonoBehaviour
         //スクリーン座標をワールド座標に変換
         worldPos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, 4f, 10f));
         // X 座標を制限
-        worldPos.x = Mathf.Clamp(worldPos.x, -3f, 3f);
+        worldPos.x = Mathf.Clamp(worldPos.x, -2.5f, 2.5f);
         worldPos.y = Mathf.Clamp(worldPos.y, 4f, 4f); // ワールド座標のy軸がなぜか-5になるため
         //ワールド座標を自身の座標に設定
         transform.position = worldPos;
