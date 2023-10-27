@@ -5,6 +5,7 @@ using UnityEngine;
 public class Items : MonoBehaviour
 {
     [SerializeField] private ItemType itemType = ItemType.c;
+    [SerializeField] private int itemScore;
     [SerializeField] private GameObject nextItemPrefab;
 
 
@@ -29,7 +30,10 @@ public class Items : MonoBehaviour
             {
                 if (nextItemPrefab != null)
                 {
-                    Debug.Log("next item");
+                    GameObject scoreObj = GameObject.Find("ScoreManager");
+                    scoreObj.GetComponent<ScoreManager>().ScoreChanger(itemScore);
+
+                    Debug.Log(nextItemPrefab);
 
                     // 速度の平均
                     Vector3 velocity = (GetComponent<Rigidbody2D>().velocity + otherItem.gameObject.GetComponent<Rigidbody2D>().velocity) / 2;
