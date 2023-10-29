@@ -54,7 +54,7 @@ public class ItemsManager : MonoBehaviour
     {
         if (isGround)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && PanelManager.gameStatus == "Play")
             {
                 isGround = false;
                 Vector3 cursorPos = GameObject.Find("cursor").transform.position;

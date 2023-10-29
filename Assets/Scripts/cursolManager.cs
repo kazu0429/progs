@@ -5,15 +5,20 @@ using UnityEngine;
 public class cursolManager : MonoBehaviour
 {
     Vector3 mousePos, worldPos;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        if (PanelManager.gameStatus != "Play")
+        {
+            return;
+        }
         //マウス座標の取得
         mousePos = Input.mousePosition;
         //スクリーン座標をワールド座標に変換

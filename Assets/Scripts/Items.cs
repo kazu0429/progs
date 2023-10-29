@@ -27,6 +27,7 @@ public class Items : MonoBehaviour
         {
             Debug.Log(gameObject.transform.position.y);
             Debug.Log("GameOver");
+            GameObject.Find("PanelManager").GetComponent<PanelManager>().GameOver();
         }
     }
 
