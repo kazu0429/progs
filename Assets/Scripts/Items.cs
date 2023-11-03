@@ -46,11 +46,10 @@ public class Items : MonoBehaviour
             }
             if(myNumber >= otherItem.myNumber)
             {
+                GameObject scoreObj = GameObject.Find("ScoreManager");
+                scoreObj.GetComponent<ScoreManager>().ScoreChanger(itemScore);
                 if (nextItemPrefab != null)
                 {
-                    GameObject scoreObj = GameObject.Find("ScoreManager");
-                    scoreObj.GetComponent<ScoreManager>().ScoreChanger(itemScore);
-
                     Debug.Log(nextItemPrefab);
 
                     // 速度の平均
@@ -62,7 +61,6 @@ public class Items : MonoBehaviour
 
                     GameObject newItem = Instantiate(nextItemPrefab, centerPosition,rotation);
                     newItem.GetComponent<Rigidbody2D>().velocity = velocity;
-
                 }
             }
             Debug.Log("hit");
