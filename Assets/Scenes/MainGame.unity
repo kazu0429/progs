@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_text: "\u64CD\u4F5C\u65B9\u6CD5\n\u30DE\u30A6\u30B9\u3067\u5DE6\u53F3\u306B\u79FB\u52D5\n\n\u30AF\u30EA\u30C3\u30AF\u3067\u843D\u3068\u3059"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7856473d6065947aeabed9f2c12c1f12, type: 2}
-  m_sharedMaterial: {fileID: -8214481105027756836, guid: 7856473d6065947aeabed9f2c12c1f12, type: 2}
+  m_sharedMaterial: {fileID: 3900564863682468810, guid: 7856473d6065947aeabed9f2c12c1f12, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
