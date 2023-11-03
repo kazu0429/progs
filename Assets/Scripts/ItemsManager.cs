@@ -45,6 +45,7 @@ public class ItemsManager : MonoBehaviour
     {
         nowItemIndex = Random.Range(0, ItemPrefabs.Length);
         ChangeItemSprite(nowItemIndex);
+
         nextItemIndex = ChoiceNextItem();
         isGround = true;
     }
