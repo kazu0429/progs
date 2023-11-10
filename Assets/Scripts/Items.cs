@@ -8,6 +8,9 @@ public class Items : MonoBehaviour
     [SerializeField] private int itemScore;
     [SerializeField] private GameObject nextItemPrefab;
 
+    public AudioClip hitSound;
+    public AudioClip overSound;
+
 
     public int myNumber;
     private static int totalNumber = 0;
@@ -27,6 +30,7 @@ public class Items : MonoBehaviour
         {
             Debug.Log(gameObject.transform.position.y);
             Debug.Log("GameOver");
+            AudioSource.PlayClipAtPoint(overSound, gameObject.transform.position);
             GameObject.Find("PanelManager").GetComponent<PanelManager>().GameOver();
         }
     }
@@ -48,6 +52,11 @@ public class Items : MonoBehaviour
             {
                 GameObject scoreObj = GameObject.Find("ScoreManager");
                 scoreObj.GetComponent<ScoreManager>().ScoreChanger(itemScore);
+
+               
+                AudioSource.PlayClipAtPoint(hitSound, gameObject.transform.position);
+                Debug.Log("hit");
+
                 if (nextItemPrefab != null)
                 {
                     Debug.Log(nextItemPrefab);
@@ -63,7 +72,6 @@ public class Items : MonoBehaviour
                     newItem.GetComponent<Rigidbody2D>().velocity = velocity;
                 }
             }
-            Debug.Log("hit");
             Destroy(gameObject);
         }
     }

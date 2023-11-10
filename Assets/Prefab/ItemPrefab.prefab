@@ -164,4 +164,6 @@ MonoBehaviour:
   itemType: 0
   itemScore: 1
   nextItemPrefab: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 25db86a13f60e41f8ab191d97b3d9392, type: 3}
+  overSound: {fileID: 8300000, guid: 39891524607bb42e4889fe1787d09c1c, type: 3}
   myNumber: 0

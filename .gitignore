@@ -33,5 +33,7 @@ sysinfo.txt
 Release/
 Debug/
 
+Logs/*
+
 # Mac
 .DS_Store
