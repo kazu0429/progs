@@ -9,8 +9,6 @@ public class Items : MonoBehaviour
     [SerializeField] private GameObject nextItemPrefab;
 
     public AudioClip hitSound;
-    public AudioClip overSound;
-
 
     public int myNumber;
     private static int totalNumber = 0;
@@ -26,12 +24,19 @@ public class Items : MonoBehaviour
 
     private void Update()
     {
+        if(PanelManager.gameStatus == "Over")
+        {
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        }
         if (gameObject.transform.position.y >= 3.6)
         {
-            Debug.Log(gameObject.transform.position.y);
-            Debug.Log("GameOver");
-            AudioSource.PlayClipAtPoint(overSound, gameObject.transform.position);
             GameObject.Find("PanelManager").GetComponent<PanelManager>().GameOver();
+        }
+
+        if(gameObject.transform.position.y < -6.0)
+        {
+            Destroy(gameObject);
         }
     }
 
