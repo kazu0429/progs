@@ -11,6 +11,8 @@ public class PanelManager : MonoBehaviour
     [SerializeField] GameObject overPanel;
 
     public static string gameStatus;
+
+    public AudioClip gameoverSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,7 @@ public class PanelManager : MonoBehaviour
     {
         gameStatus = "Over";
         overPanel.SetActive(true);
+        AudioSource.PlayClipAtPoint(gameoverSound, new Vector3(0, 0, -20));
     }
 
     public void InitToMenu()
