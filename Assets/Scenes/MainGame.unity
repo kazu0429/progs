@@ -555,7 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPanel: {fileID: 1624276494}
   overPanel: {fileID: 1494143239}
-  gameoverSound: {fileID: 8300000, guid: 25db86a13f60e41f8ab191d97b3d9392, type: 3}
+  gameoverSound: {fileID: 8300000, guid: 39891524607bb42e4889fe1787d09c1c, type: 3}
 --- !u!4 &368476030
 Transform:
   m_ObjectHideFlags: 0
