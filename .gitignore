@@ -66,6 +66,3 @@ Logs/*
 
 # Mac
 .DS_Store
-
-# usersettings
-/[Uu]serSettings/
