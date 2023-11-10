@@ -29,6 +29,8 @@ public class ItemsManager : MonoBehaviour
 
     [SerializeField] private bool isGround;
 
+    public AudioClip clickSound;
+
     private int ChoiceNextItem()
     {
         int index = Random.Range(0, ItemPrefabs.Length);
@@ -57,6 +59,7 @@ public class ItemsManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && PanelManager.gameStatus == "Play")
             {
+                AudioSource.PlayClipAtPoint(clickSound, new Vector3(0, 0, -20));
                 isGround = false;
                 Vector3 cursorPos = GameObject.Find("cursor").transform.position;
 
